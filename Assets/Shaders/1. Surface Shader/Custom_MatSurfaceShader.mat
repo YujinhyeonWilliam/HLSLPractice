@@ -30,12 +30,17 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Brightness: 0.5
+    - _Alpha: 1
+    - _Blue: 0.329
+    - _Brightness: -0.342
     - _Glossiness: 0.5
+    - _Green: 0.139
     - _Metallic: 0
+    - _Red: 0.807
     - _TestFloat: 0.5
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _TestColor: {r: 0.4811321, g: 0.26507655, b: 0.26507655, a: 1}
+    - _Emission: {r: 0.5284132, g: 0.8301887, b: 0.29369885, a: 1}
+    - _TestColor: {r: 0.9622641, g: 0.6581524, b: 0.6581524, a: 1}
     - _TestVector: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
