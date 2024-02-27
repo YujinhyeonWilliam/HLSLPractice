@@ -402,8 +402,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d1c30c6d040de343a30d8996854b16c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextForGizmo: Metalic
-  AdjustByCustom: {x: -1.2, y: -0.4, z: 0}
+  TextForGizmo: Metalic and Normal
+  AdjustByCustom: {x: -0.68, y: -0.4, z: 0}
   FontSize: 24
 --- !u!1 &824996178
 GameObject:
