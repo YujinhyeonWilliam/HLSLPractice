@@ -201,8 +201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d1c30c6d040de343a30d8996854b16c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextForGizmo: Blinn-Phong
-  AdjustByCustom: {x: 0.5, y: -0.2, z: 0.6}
+  TextForGizmo: Blinn-Phong + Fake Specular
+  AdjustByCustom: {x: 0, y: 0, z: 0.6}
   FontSize: 20
 --- !u!1001 &368761608
 PrefabInstance:
