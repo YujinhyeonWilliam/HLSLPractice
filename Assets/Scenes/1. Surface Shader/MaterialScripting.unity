@@ -460,8 +460,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 664597985}
-  m_LocalRotation: {x: -0.0077573555, y: 0.73854417, z: -0.67410344, w: -0.008771995}
-  m_LocalPosition: {x: -1.7813458, y: 25.73381, z: 10.796473}
+  m_LocalRotation: {x: 0.009546514, y: -0.48840195, z: 0.0050757607, w: 0.8725518}
+  m_LocalPosition: {x: -19.981573, y: 0.30064577, z: -10.506283}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2819,6 +2819,87 @@ MonoBehaviour:
   m_SkinMeshRef: {fileID: 0}
   m_OriginalMeshObject: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
   m_Mode: 0
+--- !u!1001 &1881228652
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: a8618ff3dd8ef274ba12693d26397c5b, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a8618ff3dd8ef274ba12693d26397c5b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -21.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a8618ff3dd8ef274ba12693d26397c5b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.212
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a8618ff3dd8ef274ba12693d26397c5b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.703
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a8618ff3dd8ef274ba12693d26397c5b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.46787024
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a8618ff3dd8ef274ba12693d26397c5b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.08332212
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a8618ff3dd8ef274ba12693d26397c5b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.86625737
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a8618ff3dd8ef274ba12693d26397c5b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.1541203
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a8618ff3dd8ef274ba12693d26397c5b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 20.181
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a8618ff3dd8ef274ba12693d26397c5b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 123.254
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a8618ff3dd8ef274ba12693d26397c5b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.009
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a8618ff3dd8ef274ba12693d26397c5b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9d213f3343ba58446939dde2872410c8, type: 2}
+    - target: {fileID: 919132149155446097, guid: a8618ff3dd8ef274ba12693d26397c5b, type: 3}
+      propertyPath: m_Name
+      value: 2Pass
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a8618ff3dd8ef274ba12693d26397c5b, type: 3}
+--- !u!1 &1881228653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a8618ff3dd8ef274ba12693d26397c5b, type: 3}
+  m_PrefabInstance: {fileID: 1881228652}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1881228654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881228653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1c30c6d040de343a30d8996854b16c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextForGizmo: 2Pass
+  AdjustByCustom: {x: 0, y: 0, z: 1}
+  FontSize: 20
 --- !u!1 &1892407464
 GameObject:
   m_ObjectHideFlags: 0
