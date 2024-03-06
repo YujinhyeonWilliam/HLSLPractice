@@ -4,6 +4,8 @@ Shader "Custom/Dissolve"
     {
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
         _NoiseTex ("Noise Texture", 2D) = "white" {}
+        _OutlineThickness ("Outline Thickness", Range(1, 1.5)) = 1.15
+        [HDR] _OutlineColor ("Outline Color", Color) = (1, 1, 1, 1)
     }
     SubShader
     {
@@ -45,6 +47,8 @@ Shader "Custom/Dissolve"
 
         float _lerpValue;
         float _Cutout;
+        float _OutlineThickness;
+        float4 _OutlineColor;
 
         struct Input
         {
@@ -57,11 +61,11 @@ Shader "Custom/Dissolve"
             fixed4 c = tex2D (_MainTex, IN.uv_MainTex);
             float4 noise = tex2D (_NoiseTex, IN.uv_NoiseTex);
             float fracValue = frac(_Time.y);
+            float alpha;
 
             o.Albedo = c.rgb;
 
-            // Pingpong 구현해봄
-
+            // Pingpong효과. 시간에 따라 오브젝트가 사라졌다가 나타났다함
             if(floor(_Time.y) % 2 == 0)
                 _lerpValue = 1 - fracValue;
             else
@@ -70,9 +74,20 @@ Shader "Custom/Dissolve"
             _Cutout = lerp(0, 1, _lerpValue) * 0.05;
 
            if(noise.r >= _Cutout)
-               o.Alpha = 1;
+               alpha = 1;
            else
-               o.Alpha = 0;
+               alpha = 0;
+
+         
+           // Dissolve의 외곽선 색깔 처리
+           float outline;
+           if(noise.r >= _Cutout * _OutlineThickness)
+              outline = 0;
+           else
+              outline = 1;
+           
+           o.Emission = outline * _OutlineColor.rgb;
+           o.Alpha = alpha;
         }
         ENDCG
     }

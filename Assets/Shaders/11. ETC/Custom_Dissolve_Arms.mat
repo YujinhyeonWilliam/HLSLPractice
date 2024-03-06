@@ -31,5 +31,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _Cutout: 0
-    m_Colors: []
+    - _OutlineThickness: 1.2
+    - _isReverse: 0
+    m_Colors:
+    - _OutlineColor: {r: 0.34099177, g: 9.320441, b: 9.149945, a: 1}
   m_BuildTextureStacks: []
