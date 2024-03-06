@@ -12,6 +12,8 @@ Shader "Custom/AdvancedFire"
         Tags { "RenderType"="Transparent" "Queue" = "Transparent"}
         LOD 200
 
+        cull off
+
         CGPROGRAM
 
         #pragma surface surf Standard alpha:fade
