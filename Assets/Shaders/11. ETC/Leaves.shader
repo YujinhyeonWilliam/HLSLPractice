@@ -25,7 +25,7 @@ Shader "Custom/Leaves"
 
         void vert(inout appdata_full v)
         {
-            v.vertex.x += sin(_Time.y * 0.1) * _Move * v.color.r;
+            v.vertex.x += sin(_Time.y * _Timeing) * _Move * v.color.r;
         }
 
         struct Input

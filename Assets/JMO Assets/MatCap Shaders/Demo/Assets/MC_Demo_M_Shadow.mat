@@ -7,11 +7,11 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Custom_Leaves
-  m_Shader: {fileID: 4800000, guid: 7f68cc1a436bb804b8d5d1accfad05e9, type: 3}
+  m_Name: MC_Demo_M_Shadow
+  m_Shader: {fileID: 10750, guid: 0000000000000000f000000000000000, type: 0}
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -21,14 +21,13 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 1d0acc09e270a62458265b3ebddd4ebd, type: 3}
+        m_Texture: {fileID: 2800000, guid: 428706618c1f8d045a2067b44814a56e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Cutoff: 0.33
-    - _Move: 0.122
-    - _Timeing: 0.79
+    - _InvFade: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _TintColor: {r: 0.051470578, g: 0, b: 0, a: 0.19607843}
   m_BuildTextureStacks: []
