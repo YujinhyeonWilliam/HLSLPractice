@@ -2,6 +2,7 @@ Shader "Custom/Water"
 {
     Properties
     {
+        _MainTex ("Main Albedo", 2D) = "white" {}
         _BumpMap ("Normal Map", 2D) = "bump" {}
         _Cube ("Cube", Cube) = "" {}
         _SPColor("Specular Color", Color) = (1, 1, 1, 1)
@@ -19,6 +20,7 @@ Shader "Custom/Water"
         #pragma surface surf WaterSpecular alpha:fade vertex:vert
         #pragma target 3.0
 
+        sampler2D _MainTex;
         sampler2D _BumpMap;
         sampler2D _GrabTexture;
         samplerCUBE _Cube;
@@ -38,6 +40,7 @@ Shader "Custom/Water"
 
         struct Input
         {
+            float2 uv_MainTex;
             float2 uv_BumpMap;
             float3 worldRefl;
             float3 viewDir;
@@ -47,6 +50,7 @@ Shader "Custom/Water"
 
         void surf (Input IN, inout SurfaceOutput o)
         {
+            fixed4 MainTex = tex2D(_MainTex, IN.uv_MainTex);
             float3 normal1 = UnpackNormal(tex2D(_BumpMap, IN.uv_BumpMap + _Time.x * 0.1));
             float3 normal2 = UnpackNormal(tex2D(_BumpMap, IN.uv_BumpMap - _Time.x * 0.1));
             o.Normal = (normal1 + normal2) / 2;
@@ -61,7 +65,10 @@ Shader "Custom/Water"
             float rim = saturate(dot(o.Normal, IN.viewDir));           
             rim = pow(1-rim, 1.5);
 
-            o.Emission = (refColor * rim + refraction) * 0.5;
+            float dotdata = pow(saturate(1-dot(o.Normal, IN.viewDir)), 0.6);
+            float3 water = lerp(refraction, refColor, dotdata).rgb;
+
+            o.Emission = (water * MainTex.rgb + refraction) * 0.5;
             o.Alpha = 1;
         }
 
