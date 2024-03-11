@@ -35,7 +35,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Cutoff: 0.5
-    - _RefracPow: 0.5
+    - _RefracPow: 0.08
     - _SPMulti: 1
     - _SPower: 200
     m_Colors:
